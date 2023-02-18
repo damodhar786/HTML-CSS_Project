@@ -42,10 +42,20 @@ textarea {
     --HIGHLIGHT-COLOR: rgb(51, 178, 51);
     --LINK-COLOR: #000;
     --LINK-HOVER: hsla(0, 0%, 0%, 0.6);
-    --LINK-ACTIVE: orange; 
+    --LINK-ACTIVE: orange;
+    --HEADER-BGCOLOR: #000;
+    --HEADER-COLOR: #FFF;
+    --NAV-BGCOLOR: #FFF;
 
     /* BORDERS */
     --BORDERS: 1px solid var(--BORDER-COLOR);
+
+    /* STANDARD PADDING */
+    --PADDING-TOP-BOTTOM: 0.25em;
+    --PADDING-SIDE: 2.5%;
+
+    /* STANDARD MARGIN */
+    --MARGIN: clamp(1em, 2.5vh, 1.5em) 0;
 }
 
 
@@ -103,6 +113,7 @@ p{
 
 a:any-link{
     color: var(--LINK-COLOR);
+    text-decoration: none;
 }
 
 a:hover, a:focus-visible{
@@ -114,4 +125,33 @@ a:active{
 }
 
 /* HEADER */
+
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.header_h1{
+    text-align: center;
+    background-color: var(--HEADER-BGCOLOR);
+    color: var(--HEADER-COLOR);
+    padding: var(--PADDING-TOP-BOTTOM) var(--PADDING-SIDE);
+}
+
+.header_nav{
+    background-color: var(--NAV-BGCOLOR);
+    border-bottom: var(--BORDERS);
+    font-weight: bold;
+    box-shadow: 0 6px 5px -5px var(--BORDER-COLOR);
+}
+
+.header_ul{
+    padding: var(--PADDING-TOP-BOTTOM) var(--PADDING-SIDE);
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
 
