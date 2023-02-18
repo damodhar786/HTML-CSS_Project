@@ -46,6 +46,8 @@ textarea {
     --HEADER-BGCOLOR: #000;
     --HEADER-COLOR: #FFF;
     --NAV-BGCOLOR: #FFF;
+    --HERO-BGCOLOR: rgba(51, 178, 51, 0.75);
+    --HERO-COLOR: #FFF;
 
     /* BORDERS */
     --BORDERS: 1px solid var(--BORDER-COLOR);
@@ -154,4 +156,37 @@ a:active{
     gap: 1rem;
 }
 
+/* HERO */
 
+.hero{
+    position: relative;
+}
+
+.hero_h2{
+    background-color: var(--HERO-BGCOLOR);
+    color: var(--HERO-COLOR);
+    padding: 0.25em 0.5em;
+    letter-spacing: 0.1rem;
+    text-shadow: 3px 3px 5px var(--BORDER-COLOR);
+    position: absolute;
+    top: -100px;
+    left: 20px;
+    animation: showWelcome 0.5s ease-in-out 1s forwards;
+}
+
+@keyframes showWelcome{
+    0%{
+        top: -20px;
+        transform: skew(0deg, -5deg) scaleY(0);
+    }
+
+    80%{
+        top: 30px;
+        transform: skew(10deg, -5deg) scaleY(1.2);
+    }
+    
+    100%{
+        top: 20px;
+        transform: skew(-10deg, -5deg) scaleY(1);
+    }
+}
