@@ -48,30 +48,30 @@
             </address>
         </article>
 
-        <article class="main_article">
-            <h2>Our Contact Form</h2>
-            <form action="https://httpbin.org/get" method="get">
-                <fieldset>
-                    <legend>Send Us A Message</legend>
-                    <p>
-                        <label for="name">Name: </label>
-                        <input type="text" name="name" id="name" placeholder="Your Name" required>
+        <article class="main_article contact">
+            <h2 class="contact_h2">Our Contact Form</h2>
+            <form action="https://httpbin.org/get" method="get" class="contact_form">
+                <fieldset class="contact_fieldset">
+                    <legend class="offscreen">Send Us A Message</legend>
+                    <p class="contact_p">
+                        <label class="contact_label" for="name">Name: </label>
+                        <input class="contact_input" type="text" name="name" id="name" placeholder="Your Name" required>
                     </p>
 
-                    <p>
-                        <label for="email">Email: </label>
-                        <input type="email" name="email" id="email" placeholder="Your Email" required>
+                    <p class="contact_p">
+                        <label class="contact_label" for="email">Email: </label>
+                        <input class="contact_input" type="email" name="email" id="email" placeholder="Your Email" required>
                     </p>
 
-                    <p>
-                        <label for="message">Your Message: </label>
+                    <p class="contact_p">
+                        <label class="contact_label" for="message">Your Message: </label>
                         <br>
-                        <textarea name="message" id="message" placeholder="Type your message here" cols="30" rows="10"
+                        <textarea class="contact_textarea" name="message" id="message" placeholder="Type your message here" cols="30" rows="10"
                             required></textarea>
                     </p>
                 </fieldset>
-                <button type="submit">Send</button>
-                <button type="reset">Reset</button>
+                <button class="contact_button" type="submit">Send</button>
+                <button class="contact_button" type="reset">Reset</button>
             </form>
         </article>
 
