@@ -201,3 +201,34 @@ a:active{
     text-align: center;
     padding: var(--PADDING-TOP-BOTTOM) var(--PADDING-SIDE);
 }
+
+/* MAIN */
+
+.main{
+    padding: var(--PADDING-TOP-BOTTOM) var(--PADDING-SIDE);
+}
+
+.main_article{
+    scroll-margin-top: 6.5rem;
+    margin: var(--MARGIN);
+}
+
+.main_article:first-child{
+    margin-top: 1em;
+}
+
+.main_article:last-child{
+    min-height: calc(100vh - 20px);
+}
+
+
+/* ABOUT */
+
+.about_trivia{
+    margin: var(--MARGIN);
+}
+
+.about_trivia-answer{
+    margin-top: 1em;
+}
+
