@@ -51,6 +51,7 @@ textarea {
 
     /* BORDERS */
     --BORDERS: 1px solid var(--BORDER-COLOR);
+    --BORDER-RADIUS: 15px;
 
     /* STANDARD PADDING */
     --PADDING-TOP-BOTTOM: 0.25em;
@@ -257,25 +258,97 @@ a:active {
 .contact_input,
 .contact_textarea {
     padding: 0.5em;
-    border-radius: 15px;
+    border-radius: var(--BORDER-RADIUS);
     border-width: 2px;
     width: 100%;
 }
 
-.contact_button{
+.contact_button {
     background-color: var(--HIGHLIGHT-COLOR);
     color: var(--HEADER-COLOR);
-    border-radius: 15px;
+    border-radius: var(--BORDER-RADIUS);
     padding: 0.5em;
     max-width: 50%;
     width: 25%;
 }
 
-.contact_button:first-child{
+.contact_button:first-child {
     background-color: var(--HIGHLIGHT-COLOR);
 }
 
-.contact_button:last-child{
+.contact_button:last-child {
     background-color: rgb(238, 177, 24);
 }
 
+/* MENU */
+
+thead,
+tbody,
+tfoot,
+tr {
+    display: contents;
+}
+
+.menu_container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "hd1 hd2 hd3"
+        "cr cr1 cr1p"
+        "cr cr2 cr2p"
+        "cr cr3 cr3p"
+        "sf sf1 sf1p"
+        "sf sf2 sf2p"
+        "sf sf3 sf3p"
+        "cs cs cs";
+    gap: 0.1em;
+    margin-bottom: 1em;        
+}
+
+.menu_cr{
+    grid-area: cr;
+}
+
+.menu_sf{
+    grid-area: sf;
+}
+
+.menu_cs{
+    grid-area: cs;
+}
+
+.menu_cr,
+.menu_sf,
+.menu_cs,
+.menu_header{
+    color: var(--HIGHLIGHT-COLOR);
+    font-weight: bold;
+    height: 100%;
+    display: grid;
+    place-content: center;
+}
+
+.menu_header,
+.menu_item{
+    width: 100%;
+    padding: 1em;
+    border: medium ridge var(--BORDER-COLOR);
+}
+
+.menu_item{
+    display: grid;
+    place-content: center;
+}
+
+thead th:first-child{
+    border-top-left-radius: var(--BORDER-RADIUS);
+}
+
+thead th:last-child{
+    border-top-right-radius: var(--BORDER-RADIUS);
+}
+
+tfoot td{
+    border-bottom-left-radius: var(--BORDER-RADIUS);
+    border-bottom-right-radius: var(--BORDER-RADIUS);
+}
