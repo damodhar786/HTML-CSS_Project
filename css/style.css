@@ -270,6 +270,7 @@ a:active {
     padding: 0.5em;
     max-width: 50%;
     width: 25%;
+    font-weight: bold;
 }
 
 .contact_button:first-child {
